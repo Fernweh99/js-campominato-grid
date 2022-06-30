@@ -15,6 +15,9 @@ Al click del bottone play, vengono generate 100 celle in 10 righe da 10 celle ci
 
 #MILESTONE 3
 In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
+
+#MILESTONE 4
+Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!
 */
 
 //recupero la griglia dove inserire le celle
@@ -36,5 +39,12 @@ playButton.addEventListener("click", ()=> {
   for (let i = 1; i <= 100; i++){
     const cell = getCreatecell(i);
     grid.appendChild(cell);
+
+    cell.addEventListener("click", (e)=>{
+      e.target.classList.toggle("clicked");
+      if (e.target.classList.contains("clicked")) {
+        console.log(i);
+      }
+    })
   }
 })
