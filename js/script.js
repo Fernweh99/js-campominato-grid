@@ -12,6 +12,9 @@ Prepariamo l'HTML ed il CSS per ottenere il risultato grafico che vediamo nell'i
 #MILESTONE 2
 Rimuoviamo le celle che abbiamo inserito nell'HTML in modo da generarle tramite JS.
 Al click del bottone play, vengono generate 100 celle in 10 righe da 10 celle ciascuna.
+
+#MILESTONE 3
+In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
 */
 
 //recupero la griglia dove inserire le celle
@@ -21,16 +24,17 @@ const grid = document.getElementById('grid');
 const playButton = document.getElementById('play');
 
 //creo una funzione per creare le celle
-const getCreatecell = () => {
+const getCreatecell = (content) => {
   const cell = document.createElement('div');
   cell.className = 'cell';
+  cell.innerText = content; 
   return cell;
 }
 
 //al click del bottone creo tot celle con un ciclo for
 playButton.addEventListener("click", ()=> {
   for (let i = 1; i <= 100; i++){
-    const cell = getCreatecell();
+    const cell = getCreatecell(i);
     grid.appendChild(cell);
   }
 })
