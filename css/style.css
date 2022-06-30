@@ -1,0 +1,48 @@
+/*# Generics */
+
+/*# Header */
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #FFF;
+}
+
+header .col {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  height: 60px;
+}
+
+/*# Main */
+main {
+  background-color: #7FFFD3;
+  padding: 60px 0;
+}
+
+main .grid {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+}
+
+.grid .cell {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  border: 1px solid black;
+  
+}
+
+/*# Footer */
+footer {
+  height: 50px;
+}
+
+footer h5 {
+  line-height: 50px;
+}
