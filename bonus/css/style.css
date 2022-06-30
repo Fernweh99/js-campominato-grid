@@ -33,8 +33,6 @@ main #grid {
 
 #grid .cell {
   cursor: pointer;
-  width: calc(100% / 10);
-  height: calc(100% / 10);
   border: 1px solid black;
   display: flex;
   align-items: center;
@@ -43,6 +41,22 @@ main #grid {
 
 #grid .cell.clicked {
   background-color: #01BFFE;
+}
+
+/* Grid modality */
+#grid .cell.easy {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+}
+
+#grid .cell.medium {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+}
+
+#grid .cell.hard {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
 }
 
 /*# Footer */
