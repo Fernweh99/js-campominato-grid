@@ -23,7 +23,7 @@ main {
   padding: 60px 0;
 }
 
-main .grid {
+main #grid {
   width: 500px;
   height: 500px;
   display: flex;
@@ -31,11 +31,11 @@ main .grid {
   margin: 0px auto;
 }
 
-.grid .cell {
+#grid .cell {
   width: calc(100% / 10);
   height: calc(100% / 10);
   border: 1px solid black;
-  
+
 }
 
 /*# Footer */

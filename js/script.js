@@ -8,4 +8,29 @@ di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
 # MILESTONE 1:
 Prepariamo l'HTML ed il CSS per ottenere il risultato grafico che vediamo nell'immagine allegata.
+
+#MILESTONE 2
+Rimuoviamo le celle che abbiamo inserito nell'HTML in modo da generarle tramite JS.
+Al click del bottone play, vengono generate 100 celle in 10 righe da 10 celle ciascuna.
 */
+
+//recupero la griglia dove inserire le celle
+const grid = document.getElementById('grid');
+
+//recupero il bottone per generare le celle
+const playButton = document.getElementById('play');
+
+//creo una funzione per creare le celle
+const getCreatecell = () => {
+  const cell = document.createElement('div');
+  cell.className = 'cell';
+  return cell;
+}
+
+//al click del bottone creo tot celle con un ciclo for
+playButton.addEventListener("click", ()=> {
+  for (let i = 1; i <= 100; i++){
+    const cell = getCreatecell();
+    grid.appendChild(cell);
+  }
+})
