@@ -36,15 +36,18 @@ const getCreatecell = (content) => {
 
 //al click del bottone creo tot celle con un ciclo for
 playButton.addEventListener("click", ()=> {
+  grid.innerText=" ";
+  console.clear();  
   for (let i = 1; i <= 100; i++){
     const cell = getCreatecell(i);
     grid.appendChild(cell);
 
     cell.addEventListener("click", (e)=>{
-      e.target.classList.toggle("clicked");
       if (e.target.classList.contains("clicked")) {
-        console.log(i);
+        return;
       }
+      e.target.classList.add("clicked");
+      console.log(i);
     })
   }
 })

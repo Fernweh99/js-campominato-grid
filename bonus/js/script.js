@@ -59,10 +59,11 @@ playButton.addEventListener("click", ()=> {
     grid.appendChild(cell);
 
     cell.addEventListener("click", (e)=>{
-      e.target.classList.toggle("clicked");
       if (e.target.classList.contains("clicked")) {
-        console.log(i);
+        return;
       }
+      e.target.classList.add("clicked");
+      console.log(i);
     })
   }
 })
